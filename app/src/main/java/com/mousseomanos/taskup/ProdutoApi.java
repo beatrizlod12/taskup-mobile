@@ -15,6 +15,7 @@ import retrofit2.http.Query;
 
 public interface ProdutoApi {
 
+    // ---------- Produtos ----------
     @GET("produtos")
     Call<List<Produto>> listar(@Query("nome") String nome);
 
@@ -38,4 +39,14 @@ public interface ProdutoApi {
 
     @DELETE("produtos/{id}")
     Call<Void> deletar(@Path("id") Long id);
+
+    // ---------- Vendas ----------
+    @GET("vendas")
+    Call<List<Venda>> listarVendas();
+
+    @POST("vendas")
+    Call<Venda> criarVenda(@Body VendaRequest req);
+
+    @PATCH("vendas/{id}/confirmar-pagamento")
+    Call<Venda> confirmarPagamento(@Path("id") Long id);
 }

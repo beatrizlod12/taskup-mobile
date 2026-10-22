@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F6FA">
+
+    <!-- Topo: botão voltar + título -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← Voltar"
+            android:backgroundTint="#3E2723"
+            android:layout_marginEnd="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nova venda"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#3E2723" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toque em Adicionar para montar o pedido"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Produtos disponíveis -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProdutosVenda"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Resumo do pedido -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFF3E8"
+        android:padding="12dp"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pedido"
+            android:textStyle="bold"
+            android:textColor="#A8551A" />
+
+        <TextView
+            android:id="@+id/tvItensPedido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nenhum item adicionado" />
+
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total: R$ 0,00"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp" />
+
+        <RadioGroup
+            android:id="@+id/rgPagamento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton android:id="@+id/rbPix"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="PIX" android:checked="true" />
+            <RadioButton android:id="@+id/rbDinheiro"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Dinheiro" />
+            <RadioButton android:id="@+id/rbCartao"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Cartão" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnLimpar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Limpar"
+                android:backgroundTint="#8D6E63"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnFinalizar"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="Finalizar venda"
+                android:backgroundTint="#A8551A" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnHistorico"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📋 Histórico de vendas"
+        android:backgroundTint="#3E2723"
+        android:layout_marginTop="8dp" />
+</LinearLayout>

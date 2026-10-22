@@ -98,6 +98,15 @@
         </LinearLayout>
     </LinearLayout>
 
+    <!-- Botão que abre a tela de vendas -->
+    <Button
+        android:id="@+id/btnVendas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#3E2723"
+        android:text="🛒 Nova venda" />
+
     <!-- Pesquisa e filtro -->
     <LinearLayout
         android:layout_width="match_parent"

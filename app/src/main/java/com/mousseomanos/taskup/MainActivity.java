@@ -1,5 +1,6 @@
 package com.mousseomanos.taskup;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements ProdutoAdapter.Ac
         txtStatus = findViewById(R.id.txtStatus);
         txtTituloForm = findViewById(R.id.txtTituloForm);
         Button btnBuscar = findViewById(R.id.btnBuscar);
+        Button btnVendas = findViewById(R.id.btnVendas);
 
         api = RetrofitClient.getApi();
         adapter = new ProdutoAdapter(this);
@@ -68,6 +70,15 @@ public class MainActivity extends AppCompatActivity implements ProdutoAdapter.Ac
         btnBuscar.setOnClickListener(v -> carregar());
         chkBaixo.setOnCheckedChangeListener((b, marcado) -> carregar());
 
+        // Abre a tela de vendas
+        btnVendas.setOnClickListener(v ->
+                startActivity(new Intent(MainActivity.this, VendasActivity.class)));
+    }
+
+    // Roda sempre que a tela aparece: ao abrir o app e ao voltar da tela de vendas
+    @Override
+    protected void onResume() {
+        super.onResume();
         carregar();
     }
 
