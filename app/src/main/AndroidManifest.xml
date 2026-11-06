@@ -13,22 +13,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TaskUp">
-
+        <activity
+            android:name=".ui.WebViewActivity"
+            android:exported="false" />
         <!-- Tela de vendas -->
         <activity
-            android:name=".VendasActivity"
+            android:name=".ui.VendasActivity"
             android:exported="false" />
-
-
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

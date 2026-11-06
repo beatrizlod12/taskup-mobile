@@ -1,4 +1,4 @@
-package com.mousseomanos.taskup;
+package com.mousseomanos.taskup.ui;
 
 import android.graphics.Color;
 import android.view.LayoutInflater;
@@ -8,7 +8,13 @@ import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.mousseomanos.taskup.R;
+import com.mousseomanos.taskup.model.Produto;
+
 import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -17,15 +23,22 @@ public class VendaProdutoAdapter extends RecyclerView.Adapter<VendaProdutoAdapte
 
     public interface OnAdicionar { void adicionar(Produto p); }
 
-    private final List<Produto> lista;
-    private final Map<Long, Integer> carrinho;
+    private final List<Produto> lista = new ArrayList<>();
+    private final Map<Long, Integer> carrinho = new HashMap<>();
     private final OnAdicionar listener;
     private final NumberFormat moeda = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
 
-    public VendaProdutoAdapter(List<Produto> lista, Map<Long, Integer> carrinho, OnAdicionar listener) {
-        this.lista = lista;
-        this.carrinho = carrinho;
+    public VendaProdutoAdapter(OnAdicionar listener) {
         this.listener = listener;
+    }
+
+    // Chamado pela tela quando o ViewModel manda dados novos
+    public void atualizar(List<Produto> produtos, Map<Long, Integer> pedido) {
+        lista.clear();
+        if (produtos != null) lista.addAll(produtos);
+        carrinho.clear();
+        if (pedido != null) carrinho.putAll(pedido);
+        notifyDataSetChanged();
     }
 
     @NonNull

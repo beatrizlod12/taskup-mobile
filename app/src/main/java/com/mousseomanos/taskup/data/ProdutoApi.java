@@ -1,4 +1,8 @@
-package com.mousseomanos.taskup;
+package com.mousseomanos.taskup.data;
+
+import com.mousseomanos.taskup.model.Produto;
+import com.mousseomanos.taskup.model.Venda;
+import com.mousseomanos.taskup.model.VendaRequest;
 
 import java.util.List;
 import java.util.Map;

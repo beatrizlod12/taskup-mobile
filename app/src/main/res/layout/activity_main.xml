@@ -98,14 +98,30 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!-- Botão que abre a tela de vendas -->
-    <Button
-        android:id="@+id/btnVendas"
+    <!-- Botões que abrem as outras telas -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:backgroundTint="#3E2723"
-        android:text="🛒 Nova venda" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnVendas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#3E2723"
+            android:text="🛒 Nova venda" />
+
+        <Button
+            android:id="@+id/btnWebView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#A3510F"
+            android:text="⭐ Pesquisa" />
+    </LinearLayout>
 
     <!-- Pesquisa e filtro -->
     <LinearLayout

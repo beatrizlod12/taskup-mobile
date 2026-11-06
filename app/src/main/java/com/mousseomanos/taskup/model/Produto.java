@@ -1,4 +1,4 @@
-package com.mousseomanos.taskup;
+package com.mousseomanos.taskup.model;
 
 public class Produto {
     private Long id;

@@ -1,4 +1,4 @@
-package com.mousseomanos.taskup;
+package com.mousseomanos.taskup.ui;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.mousseomanos.taskup.R;
+import com.mousseomanos.taskup.model.Produto;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
