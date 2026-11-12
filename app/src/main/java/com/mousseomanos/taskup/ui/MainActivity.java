@@ -21,7 +21,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.mousseomanos.taskup.R;
 import com.mousseomanos.taskup.model.Produto;
-import com.mousseomanos.taskup.model.ProdutoViewModel;
+import com.mousseomanos.taskup.viewmodel.ProdutoViewModel;
 
 public class MainActivity extends AppCompatActivity implements ProdutoAdapter.Acoes {
 

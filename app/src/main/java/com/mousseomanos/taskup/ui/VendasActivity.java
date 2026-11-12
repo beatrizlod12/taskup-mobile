@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.mousseomanos.taskup.R;
-import com.mousseomanos.taskup.model.VendaViewModel;
+import com.mousseomanos.taskup.viewmodel.VendaViewModel;
 
 import java.text.NumberFormat;
 import java.util.Locale;

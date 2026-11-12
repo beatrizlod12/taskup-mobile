@@ -1,10 +1,11 @@
-package com.mousseomanos.taskup.model;
+package com.mousseomanos.taskup.viewmodel;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.mousseomanos.taskup.data.ProdutoRepository;
+import com.mousseomanos.taskup.model.Produto;
 
 import java.util.ArrayList;
 import java.util.List;
