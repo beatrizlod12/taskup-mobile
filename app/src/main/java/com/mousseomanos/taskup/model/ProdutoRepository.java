@@ -1,7 +1,6 @@
-package com.mousseomanos.taskup.data;
+package com.mousseomanos.taskup.model;
 
-import com.mousseomanos.taskup.ui.ProdutoAdapter;
-import com.mousseomanos.taskup.model.Produto;
+import com.mousseomanos.taskup.view.ProdutoAdapter;
 
 import java.util.Collections;
 import java.util.List;

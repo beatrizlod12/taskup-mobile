@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.mousseomanos.taskup.data.VendaRepository;
+import com.mousseomanos.taskup.model.VendaRepository;
 import com.mousseomanos.taskup.model.Produto;
 import com.mousseomanos.taskup.model.Venda;
 import com.mousseomanos.taskup.model.VendaRequest;

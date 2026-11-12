@@ -1,4 +1,4 @@
-package com.mousseomanos.taskup.ui;
+package com.mousseomanos.taskup.view;
 
 import android.os.Bundle;
 import android.widget.Button;

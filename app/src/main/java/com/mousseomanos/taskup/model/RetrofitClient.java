@@ -1,4 +1,4 @@
-package com.mousseomanos.taskup.data;
+package com.mousseomanos.taskup.model;
 
 import java.util.concurrent.TimeUnit;
 

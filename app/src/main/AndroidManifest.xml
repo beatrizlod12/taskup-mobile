@@ -14,14 +14,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TaskUp">
         <activity
-            android:name=".ui.WebViewActivity"
+            android:name=".view.WebViewActivity"
             android:exported="false" />
         <!-- Tela de vendas -->
         <activity
-            android:name=".ui.VendasActivity"
+            android:name=".view.VendasActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

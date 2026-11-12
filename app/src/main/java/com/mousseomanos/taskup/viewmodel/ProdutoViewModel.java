@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.mousseomanos.taskup.data.ProdutoRepository;
+import com.mousseomanos.taskup.model.ProdutoRepository;
 import com.mousseomanos.taskup.model.Produto;
 
 import java.util.ArrayList;
